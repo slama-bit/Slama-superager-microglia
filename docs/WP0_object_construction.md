@@ -1,7 +1,7 @@
 # WP0 — Artifact Firewall & Microglia Object Construction
 
-**Status:** ✅ Complete, frozen
-**Notebook:** `notebooks/WP0_clean_v2_executed.ipynb`
+**Status:** ✅ Complete, frozen (v2.1)
+**Script:** `scripts/WP0_object_construction.R` (reconstructed; the executed notebook was lost)
 
 ## Output
 
@@ -42,4 +42,4 @@
 
 - FRiP is not computable, because only a single merged fragment file is available.
 - Donor 20 has RNA only, so it is excluded from all ATAC analyses.
-- Ambient RNA correction (DecontX) was planned. [CONFIRM: applied or dropped]
+- No ambient RNA correction was applied, following the parent paper. SoupX/CellBender became feasible later (raw CellRanger matrices from the authors) and are candidates for a WP8 sensitivity analysis.

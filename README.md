@@ -48,12 +48,21 @@ The primary contrast is **SA vs HA** (healthy aged). The **donor** is the unit o
 │   ├── decisions_log.md
 │   └── roadmap.md
 ├── notebooks/        # executed .ipynb per WP (papermill outputs)
-├── scripts/          # helper R / Python scripts
+├── scripts/          # reconstructed WP0 / WP1 pipelines (see Code status)
 ├── results/
 │   ├── tables/       # small CSV outputs (QC tables, marker lists, abundance tests)
 │   └── plots/        # PNG / PDF figures
 └── env/              # sessionInfo(), conda env export
 ```
+
+## Code status — read before using
+
+> **The scripts in `scripts/` are reconstructed, not the executed code.** The compute instance holding the original notebooks was lost. The scripts were rebuilt from the analysis session logs. They follow the final locked pipeline, but re-running them is **not guaranteed to reproduce the frozen objects or their MD5s**. Values from the executed run are kept as `# executed run:` comments. Steps that could not be recovered are marked `# TODO`.
+
+| Script | Source of reconstruction |
+|---|---|
+| `scripts/WP0_object_construction.R` | Full WP0_clean_v2 notebook source, plus the v2.1 identity-panel fix |
+| `scripts/WP1_state_discovery.R` | Final WP1 pipeline steps, plus the Harmony `donor_id` fix |
 
 Large objects (`.rds`, fragment files, peak matrices) are **not** versioned. See `.gitignore`. Each frozen object is identified by its MD5 checksum in the docs.
 
