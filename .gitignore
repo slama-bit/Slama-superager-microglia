@@ -1,0 +1,32 @@
+# large data objects — never commit
+*.rds
+*.RDS
+*.rda
+*.RData
+*.h5
+*.h5ad
+*.h5seurat
+*.loom
+*.mtx
+*.mtx.gz
+*.tsv.gz
+*.tsv.gz.tbi
+*.bed.gz
+*.bam
+*.bai
+*.xlsx
+data/
+fragments/
+milo/
+
+# environment / caches
+.Rhistory
+.Rproj.user/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+
+# credentials
+.env
+*.json.key
